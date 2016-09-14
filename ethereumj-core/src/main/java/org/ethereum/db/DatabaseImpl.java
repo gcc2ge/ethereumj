@@ -17,6 +17,7 @@ import java.util.List;
  * Choice must be made between:
  * Pure Java: https://github.com/dain/leveldb
  * JNI binding: https://github.com/fusesource/leveldbjni
+ * Test
  */
 public class DatabaseImpl implements Database {
 

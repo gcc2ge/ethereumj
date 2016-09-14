@@ -1,0 +1,32 @@
+2016/09/07-17:57:55.972 16b58 Recovering log #15
+2016/09/07-17:57:56.012 16b58 Level-0 table #18: started
+2016/09/07-17:57:56.042 16b58 Level-0 table #18: 6783922 bytes OK
+2016/09/07-17:57:56.048 16b58 Delete type=0 #15
+2016/09/07-17:57:56.049 16b58 Delete type=3 #4
+2016/09/07-17:59:33.512 16a00 Compacting 1@0 + 1@1 files
+2016/09/07-17:59:34.317 16a00 Generated table #20: 6489 keys, 4194908 bytes
+2016/09/07-17:59:34.756 16a00 Generated table #21: 6493 keys, 4194614 bytes
+2016/09/07-17:59:34.853 16a00 Generated table #22: 6506 keys, 4194787 bytes
+2016/09/07-17:59:34.966 16a00 Generated table #23: 5512 keys, 3597496 bytes
+2016/09/07-17:59:34.966 16a00 Compacted 1@0 + 1@1 files => 16181805 bytes
+2016/09/07-17:59:34.967 16a00 compacted to: files[ 0 4 5 0 0 0 0 ]
+2016/09/07-17:59:34.968 16a00 Delete type=2 #16
+2016/09/07-17:59:34.971 16a00 Delete type=2 #18
+2016/09/07-17:59:34.972 16a00 Compacting 1@1 + 2@2 files
+2016/09/07-17:59:35.755 16a00 Generated table #24: 6508 keys, 4194813 bytes
+2016/09/07-17:59:36.105 16a00 Generated table #25: 6515 keys, 4194770 bytes
+2016/09/07-17:59:36.179 16a00 Generated table #26: 1804 keys, 1161356 bytes
+2016/09/07-17:59:36.179 16a00 Compacted 1@1 + 2@2 files => 9550939 bytes
+2016/09/07-17:59:36.179 16a00 compacted to: files[ 0 3 6 0 0 0 0 ]
+2016/09/07-17:59:36.180 16a00 Delete type=2 #13
+2016/09/07-17:59:36.182 16a00 Delete type=2 #14
+2016/09/07-17:59:36.184 16a00 Delete type=2 #23
+2016/09/07-17:59:36.184 16a00 Compacting 1@1 + 2@2 files
+2016/09/07-17:59:37.099 16a00 Generated table #27: 6524 keys, 4194735 bytes
+2016/09/07-17:59:37.710 16a00 Generated table #28: 6544 keys, 4194826 bytes
+2016/09/07-17:59:37.806 16a00 Generated table #29: 6559 keys, 4192745 bytes
+2016/09/07-17:59:37.806 16a00 Compacted 1@1 + 2@2 files => 12582306 bytes
+2016/09/07-17:59:37.815 16a00 compacted to: files[ 0 2 7 0 0 0 0 ]
+2016/09/07-17:59:37.816 16a00 Delete type=2 #10
+2016/09/07-17:59:37.839 16a00 Delete type=2 #11
+2016/09/07-17:59:37.843 16a00 Delete type=2 #20
