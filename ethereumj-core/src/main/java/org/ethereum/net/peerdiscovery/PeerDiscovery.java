@@ -70,12 +70,21 @@ public class PeerDiscovery {
         monitorThread.start();
 
         // Initialize PeerData
+        /**
+         * ip.list = [
+             "54.94.239.50:30303",
+             "52.16.188.185:30303",
+             "frontier-2.ether.camp:30303",
+             "frontier-3.ether.camp:30303",
+             "frontier-4.ether.camp:30303"
+             ]
+         */
         List<PeerInfo> peerDataList = parsePeerDiscoveryIpList(config.peerDiscoveryIPList());
         addPeers(peerDataList);
 
         for (PeerInfo peerData : this.peers) {
             WorkerThread workerThread = ctx.getBean(WorkerThread.class);
-            workerThread.init(peerData, executorPool);
+            workerThread.init(peerData, executorPool);//连接成功后断开。。。。？
             executorPool.execute(workerThread);
         }
 

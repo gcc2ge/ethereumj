@@ -238,7 +238,7 @@ public class SyncQueueImpl implements SyncQueueIfc {
 
     @Override
     public synchronized HeadersRequest requestHeaders() {
-        if (!hasGaps()) {
+        if (!hasGaps()) {//间隙
             return new HeadersRequestImpl(maxNum + 1, MAX_CHAIN_LEN, false);
         } else {
             List<HeaderElement> longestChain = getLongestChain();

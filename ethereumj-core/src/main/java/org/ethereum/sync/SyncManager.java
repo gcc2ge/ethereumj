@@ -124,7 +124,7 @@ public class SyncManager {
 
                 logger.info("Sync Manager: ON");
 
-                worldManager.waitForInit();
+                worldManager.waitForInit();//loadBlockchain
                 logger.info("Initializing SyncManager.");
 
                 //区块连接线程：不停的从区块队列中拉取区块，然后尝试连接到区块链上。

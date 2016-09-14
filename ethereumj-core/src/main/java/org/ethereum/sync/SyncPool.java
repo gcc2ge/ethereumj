@@ -33,7 +33,13 @@ import static org.ethereum.util.BIUtil.isIn20PercentRange;
  * Implements {@link Iterable} and can be used in "foreach" loop<br>
  * Used by {@link SyncManager}
  *
- *  SyncPool用来提供和管理网络节点
+ *  SyncPool用来提供和管理网络节点(activePeers)
+ *
+ * SyncPool用来提供和管理网络节点，它在初始化的过程中会创建一个网络连接维护线程。区块同步有可能需要很长时间，因此，为了加快同步，应该做好以下几点：
+     首先，需要与充分多的网络节点保持连接，理由很简单，就是要防止单点故障，最大的连接数量是可以配置的。
+     其次，同步过程需要尽量只与一些网络质量好的节点连接，例如网络延时小的节点。
+     另外，同步过程还需要尽量只与一些发送的区块的质量较高的节点连接，也就是说发送的区块的难度越大越好。
+    网络连接维护线程的目的就是要把这几件事做好，它主要是通过对连接上的每一个节点进行网络质量和区块质量统计来实现的，具体逻辑并不复杂。
  * @author Mikhail Kalinin
  * @since 10.08.2015
  */

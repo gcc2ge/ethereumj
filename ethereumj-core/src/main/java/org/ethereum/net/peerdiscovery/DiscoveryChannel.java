@@ -28,6 +28,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * This class creates the connection to an remote address using the Netty framework
  *
+ * 连接其他 客户端节点
+ *
  * @see <a href="http://netty.io">http://netty.io</a>
  */
 @Component

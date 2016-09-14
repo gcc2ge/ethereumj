@@ -69,6 +69,7 @@ public class ChannelManager {
     public void init() {
         maxActivePeers = config.maxActivePeers();
         trustedPeers = config.peerTrusted();
+        //定时任务
         mainWorker.scheduleWithFixedDelay(new Runnable() {
             @Override
             public void run() {
@@ -80,6 +81,7 @@ public class ChannelManager {
             }
         }, 0, 1, TimeUnit.SECONDS);
 
+        //监听端口
         if (config.listenPort() > 0) {
             new Thread(new Runnable() {
                         public void run() {
@@ -133,13 +135,13 @@ public class ChannelManager {
                         !trustedPeers.accept(peer.getNode())) {
 
                         // restricting inbound connections unless this is a trusted peer
-
+//限制接入连接，除非是Trusted peer
                         disconnect(peer, TOO_MANY_PEERS);
                     } else {
                         process(peer);
                         addCnt++;
                     }
-                } else {
+                } else {//关闭已激活连接
                     disconnect(peer, DUPLICATE_PEER);
                 }
 
@@ -150,7 +152,7 @@ public class ChannelManager {
         if (addCnt > 0) {
             logger.info("New peers processed: " + processed + ", active peers added: " + addCnt + ", total active peers: " + activePeers.size());
         }
-
+        //删除已处理的连接
         newPeers.removeAll(processed);
     }
 
